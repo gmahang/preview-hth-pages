@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游 · 知识与指南平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f5;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e2b3c;
+      line-height: 1.7;
+      padding: 2.5rem 1rem;
+    }
+
+    .page-wrapper {
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 2.8rem 1.5rem 2.2rem;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #e0e5eb;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1a2b3e;
+    }
+
+    .hero h1 small {
+      font-size: 1.1rem;
+      font-weight: 350;
+      color: #5f6d7c;
+      display: block;
+      margin-top: 0.3rem;
+    }
+
+    .hero p {
+      margin-top: 1.2rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.05rem;
+      color: #34495e;
+    }
+
+    /* section 卡片通用 */
+    .card-section {
+      background: #ffffff;
+      border: 1px solid #e2e7ed;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card-section:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-section h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      border-left: 5px solid #7a8b9e;
+      padding-left: 0.9rem;
+      color: #213245;
+    }
+
+    .card-section h3 {
+      font-weight: 500;
+      font-size: 1.15rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #2d4055;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+      margin: 1.2rem 0 0.4rem;
+    }
+
+    .feature-item {
+      background: #f8faff;
+      border-radius: 18px;
+      padding: 1.1rem 1.3rem;
+      border: 1px solid #e9edf3;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      color: #1f3246;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #3b4d62;
+    }
+
+    .scenario-list {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .scenario-list li {
+      padding: 0.3rem 0 0.3rem 1.6rem;
+      position: relative;
+      color: #2d4055;
+    }
+
+    .scenario-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.3rem;
+      color: #7c8fa4;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .tip-box {
+      background: #f4f7fc;
+      border-radius: 18px;
+      padding: 1.3rem 1.6rem;
+      margin: 1.5rem 0 0.2rem;
+      border-left: 5px solid #b0c1d4;
+    }
+
+    .tip-box p {
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eaedf2;
+      padding: 0.7rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 500;
+      color: #1f3246;
+    }
+
+    .faq-answer {
+      color: #3e5369;
+      margin-top: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .inline-link {
+      color: #1a5b8c;
+      text-decoration: none;
+      border-bottom: 1px dotted #97b1cb;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .inline-link:hover {
+      color: #0a3c60;
+      border-bottom: 1px solid #0a3c60;
+    }
+
+    .footer-note {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5d6e80;
+      border-top: 1px solid #dce1e9;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.6rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .card-section {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .hero {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>九游 <small>日常查询 · 对照 · 延伸阅读</small></h1>
+    <p>一个专注于提供清晰知识与实用参照的信息平台，以理性视角帮助你在日常查询、游戏对照和背景延伸中获得扎实的参考。</p>
+  </div>
+
+  <!-- 摘要+亮点 -->
+  <div class="card-section">
+    <h2>摘要</h2>
+    <p>「<a href="https://chn-ninegames.com" class="inline-link">九游</a>」的内容组织方式更贴近日常查阅习惯，不堆砌冗余资讯，而是以条目化、场景化的结构呈现，让你能够快速对照、横向比较，并在需要时进一步延伸阅读。每个条目都经过一定整理，避免散乱与过度主观，适合偏好知识型获取方式的用户。</p>
+
+    <h3>几个突出特点</h3>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>场景对照</strong>
+        <p>将信息按常见使用场景分类，例如横向对比、历史背景、版本变化、术语解析，减少反复搜索的负担。</p>
+      </div>
+      <div class="feature-item">
+        <strong>跨条目关联</strong>
+        <p>在内容中嵌入交叉引用，方便你在阅读一条目时自然跳转到相关概念，形成自己的知识链。</p>
+      </div>
+      <div class="feature-item">
+        <strong>克制但可靠</strong>
+        <p>不夸大功能，不承诺“最全”“唯一”，而是标注参考来源或日期，让读者自行判断可信度。</p>
+      </div>
+      <div class="feature-item">
+        <strong>持续微调</strong>
+        <p>随着游戏更新、社区共识变化，条目会做对应调整，保持内容与当前版本基本同步。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 使用建议 + 延伸阅读角度 -->
+  <div class="card-section">
+    <h2>使用建议：如何更高效地利用九游</h2>
+    <p>这个平台更适合作为「第二落点」——当你已有初步信息，需要对照、查漏补缺或者阅读不同角度的解释时，可以把它当作一个稳定的参考。以下是一些常见的切入方式：</p>
+    <ul class="scenario-list">
+      <li>在了解某个机制或角色后，到这里查看是否有不同时期的说明或补充背景。</li>
+      <li>同时打开两个条目作横向对比，例如版本差异、同类效果之间的细微区别。</li>
+      <li>把其中带有引用或延伸链接的段落当作线索，进一步查找原始资料或社区讨论。</li>
+      <li>如果发现内容与你的理解有出入，可以结合平台标注的时间或参考来源进行核验。</li>
+    </ul>
+
+    <div class="tip-box">
+      <p><strong>延伸阅读提示</strong> 不少条目末尾会附有「相关条目」或「参考来源」，即使不需要全文阅读，也可以快速瞄一眼，有时会发现之前忽略的有价值信息。</p>
+      <p>也可以把<a href="https://chn-ninegames.com" class="inline-link">九游</a>当作日常查询书签，遇到模糊的概念直接搜索站内关键词，往往比通篇泛读更高效。</p>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 (克制风格) -->
+  <div class="card-section">
+    <h2>常见疑问摘要</h2>
+    <div class="faq-item">
+      <div class="faq-question">九游的内容更新频率如何？</div>
+      <div class="faq-answer">并非每日更新，而是随游戏版本或社区重要动态做阶段性补充。建议在查阅时留意条目末尾标注的修订日期。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">是否涵盖所有游戏或所有细节？</div>
+      <div class="faq-answer">不追求面面俱到，而是优先整理那些容易混淆、需要对照或具有延伸价值的内容。没有覆盖的部分可能在其他平台更合适。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">内容来源是什么？</div>
+      <div class="faq-answer">主要基于版本说明、公开数据以及经过验证的社区共识，部分条目会直接链接到参考页面。不采纳未经验证的个人推测。</div>
+    </div>
+    <div style="margin-top: 1.2rem; font-size: 0.95rem;">
+      <p>如果你有更具体的使用需求，也可以把九游作为起点，再配合原始文档或专业社区交叉对比，得到更立体的理解。</p>
+    </div>
+  </div>
+
+  <!-- 简洁的访问说明 -->
+  <div class="card-section" style="padding: 1.6rem 2rem;">
+    <p style="font-size: 0.98rem; color: #2f4459;">本站点不需要注册或登录即可浏览全部内容，所有页面均以静态形式呈现。日常使用推荐通过书签或直接输入网址访问。你可以随时通过 <a href="https://chn-ninegames.com" class="inline-link">九游</a> 主页查找需要的条目。</p>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    基于公开信息整理 · 内容仅供参考 · 修订日期见各页面
+  </div>
+</div>
+</body>
+</html>
